@@ -4,7 +4,7 @@ class Solution:
         :type x: int
         :rtype: int
         """
-        max = 2**31
+        max_ = 2**31
         flag = 1
         if x < 0:
             x = -x
@@ -16,7 +16,7 @@ class Solution:
             ret += x % 10;
             x = int(x / 10)
 
-            if ret > max:
+            if ret > max_:
                 return 0
 
         return flag * ret

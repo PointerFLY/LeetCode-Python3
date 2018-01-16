@@ -18,7 +18,7 @@ class Solution:
                 if cur_length > longest_length:
                     longest_length = cur_length
                 head_idx = old_idx + 1
-                cur_length = idx - head_idx + 1  # refresh
+                cur_length = idx - head_idx + 1  # Refresh
             else:
                 cur_length += 1  # Special case: tail of String is the longest
 

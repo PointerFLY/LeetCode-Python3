@@ -35,22 +35,22 @@ class Solution:
         carry = 0
 
         while l1_node is not None or l2_node is not None or carry != 0:
-            sum = carry
+            sum_ = carry
             if l1_node is not None:
-                sum += l1_node.val
+                sum_ += l1_node.val
                 l1_node = l1_node.next
             if l2_node is not None:
-                sum += l2_node.val
+                sum_ += l2_node.val
                 l2_node = l2_node.next
 
-            carry = int(sum / 10)
-            sum = sum % 10
+            carry = int(sum_ / 10)
+            sum_ = sum_ % 10
 
             if head is None:
-                sum_node = ListNode(sum)
+                sum_node = ListNode(sum_)
                 head = sum_node
             else:
-                sum_node.next = ListNode(sum)
+                sum_node.next = ListNode(sum_)
                 sum_node = sum_node.next
 
         return head

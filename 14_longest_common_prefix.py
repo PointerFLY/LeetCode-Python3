@@ -9,10 +9,10 @@ class Solution:
 
         prefix = strs.pop()
         while strs:
-            str = strs.pop()
-            min_length = min(len(prefix), len(str))
+            str_ = strs.pop()
+            min_length = min(len(prefix), len(str_))
             for idx in range(0, min_length):
-                if prefix[idx] != str[idx]:
+                if prefix[idx] != str_[idx]:
                     prefix = prefix[0:idx]
                     break
             # When len(str) < len(prefix) && passed for-loop conditions
