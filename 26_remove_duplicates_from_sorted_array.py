@@ -7,20 +7,17 @@ class Solution:
         if not nums:
             return 0
 
-        idx = 1
-        previous = nums[0]
-        while idx < len(nums):
-            if nums[idx] == previous:
-                del nums[idx]
-            else:
-                previous = nums[idx]
-                idx += 1
+        i = 0
+        for j in range(1, len(nums)):
+            if nums[j] != nums[i]:
+                i += 1
+                nums[i] = nums[j]
 
-        return len(nums)
+        return i + 1
 
 
 s = Solution()
 assert s.removeDuplicates([]) == 0
-assert s.removeDuplicates([1, 1, 3, 3]) == 2
+assert s.removeDuplicates([1, 1, 3, 3, 3]) == 2
 assert s.removeDuplicates([1, 1, 2]) == 2
 
