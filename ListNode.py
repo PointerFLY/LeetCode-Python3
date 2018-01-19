@@ -16,3 +16,15 @@ class ListNode:
         if (self_next is not None and other_next is None) \
                 or (self_next is None and other_next is not None):
             return False
+
+        return True
+
+    def __str__(self):
+        self_next = self.next
+        str_ = str(self.val)
+        while self_next is not None:
+            str_ += '->'
+            str_ += str(self_next.val)
+            self_next = self_next.next
+
+        return str_
