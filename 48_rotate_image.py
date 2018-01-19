@@ -13,16 +13,16 @@ class Solution:
         for j in range(0, int(size / 2)):
             max_i = max_idx - j
             for i in range(j, max_i):
-                temp_1 = matrix[i][max_i]
+                temp1 = matrix[i][max_i]
                 matrix[i][max_i] = matrix[j][i]
 
-                temp_2 = matrix[max_i][max_i - i + j]
-                matrix[max_i][max_i - i + j] = temp_1
+                temp2 = matrix[max_i][max_i - i + j]
+                matrix[max_i][max_i - i + j] = temp1
 
-                temp_1 = matrix[max_i - i + j][j]
-                matrix[max_i - i + j][j] = temp_2
+                temp1 = matrix[max_i - i + j][j]
+                matrix[max_i - i + j][j] = temp2
 
-                matrix[j][i] = temp_1
+                matrix[j][i] = temp1
 
 
 mat_1 = [
